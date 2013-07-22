@@ -46,6 +46,10 @@ Folgende Einstellungen können in diesem Modul getroffen werden:
 
 ![Warenkorb](http://s1.directupload.net/images/130722/z8uctgvp.png)
 
+## Übersetzungen (i18n)
+- Deutsch (German)
+- Englisch (English)
+
 ## Verwendete Entwicklungs-Tool
 - Jetbrains PhpStorm
 - Node.js
