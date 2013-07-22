@@ -15,7 +15,7 @@ $aModule = array(
                  Verf&uuml;gbare Funktionen finden Sie im Kartenreiter "Einstellungen" in diesem Moduls.<hr/>
                  <span style="color:darkred">
                      <strong>Achtung:</strong> Dieses Modul ist auf die Theme-HTML-Struktur vom Standard-Azure-Theme
-                     ausgelegt. F&uuml;r eigene Themes m&uuml;ssen ggf. Anpassungen im Mini-Warenkorb (Header) dieses Moduls gemacht
+                     ausgelegt. F&uuml;r eigene Themes m&uuml;ssen ggf. Anpassungen in den Templates und Scritps dieses Moduls gemacht
                      werden.
                  </span>',
 
@@ -23,7 +23,7 @@ $aModule = array(
                  You can find the available functions in the \'settings\' tab of this module.<hr/>
                  <span style="color:darkred">
                      <strong>Attention:</strong> This module is based on the HTML theme-structure of the default-theme \'Azure\'.
-                     The necessary adjustments for the mini-cart (header) must be made for your own theme in this module.
+                     The necessary adjustments for your own theme must be made in the templates and scripts of this module.
                  </span>',
     ),
     'thumbnail' => 'logo.png',
