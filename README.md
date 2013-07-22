@@ -33,6 +33,19 @@ Folgende Einstellungen können in diesem Modul getroffen werden:
 - Produktmengenänderungen im Mini-Warenkorb per AJAX durchführen.
 - Button, um ein Produkt aus dem Warenkorb zu löschen, im Mini-Warenkorb bereitstellen.
 
+## Screenshots
+- Eingabefelder mit Clear-Button:
+
+![Eingabefelder mit Clear-Button](http://s14.directupload.net/images/130722/o8k2978t.png)
+
+- Mini-Warenkorb mit allen aktiven Einstellungen:
+
+![Mini-Warenkorb](http://s7.directupload.net/images/130722/n3mjgsso.png)
+
+- Warenkorb mit allen aktiven Einstellungen:
+
+![Warenkorb](http://s1.directupload.net/images/130722/z8uctgvp.png)
+
 ## Verwendete Entwicklungs-Tool
 - Jetbrains PhpStorm
 - Node.js
