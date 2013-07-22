@@ -50,7 +50,7 @@ Folgende Einstellungen können in diesem Modul getroffen werden:
 - Deutsch (German)
 - Englisch (English)
 
-## Verwendete Entwicklungs-Tool
+## Verwendete Entwicklungs-Tools
 - Jetbrains PhpStorm
 - Node.js
 - LESS-Compiler
