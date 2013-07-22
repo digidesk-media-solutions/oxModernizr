@@ -1,0 +1,301 @@
+/*
+ * [1] Generelle Verbesserungen
+ */
+.basketFlyout .item {
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+/*
+ * [2] Clear-Buttons in Formularen
+ *   > Config-Wert: dd_blEnabledClearInput
+ */
+.dd_clearInput {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #ccc;
+  width: 12px;
+  height: 14px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 2px 0 0;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+.dd_clearInput:hover {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  color: #ccc;
+}
+.dd_clearInput.show {
+  display: block;
+}
+/*
+ * [3] Produkt-Thumbnails im Mini-Warenkorb
+ *   > Config-Wert: dd_blMiniBasketThumbs
+ */
+.dd_oxModernizr_basketThumbs .thumb {
+  border-bottom: none;
+  max-width: 23px;
+  max-height: 23px;
+  float: left;
+  padding: 3px 5px 0 5px;
+}
+.dd_oxModernizr_basketThumbs .thumb:hover {
+  background: transparent;
+}
+.dd_oxModernizr_basketThumbs .thumb img {
+  max-width: 23px;
+  max-height: 23px;
+}
+/*
+ * [4] Hover-Effekt im Mini-Warenkorb bei den Produkten auf das li-Element legen
+ */
+.dd_oxModernizr_basketThumbs ul li:hover,
+.dd_oxModernizr_basketFlyout ul li:hover {
+  background: #ec6105 url("../bg/svg/grad_orange.svg");
+  background: -moz-linear-gradient(#ff8604, #ec6105);
+  background: -ms-linear-gradient(#ff8604, #ec6105);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8604), to(#ec6105));
+  background: -webkit-linear-gradient(#ff8604, #ec6105);
+  background: -o-linear-gradient(#ff8604, #ec6105);
+  background: linear-gradient(#ff8604, #ec6105);
+}
+.dd_oxModernizr_basketThumbs ul li:hover a,
+.dd_oxModernizr_basketFlyout ul li:hover a,
+.dd_oxModernizr_basketThumbs ul li:hover a span,
+.dd_oxModernizr_basketFlyout ul li:hover a span {
+  color: #ffffff;
+}
+/*
+ * [5] Produktmenge im Mini-Warenkorb (Header) änderbar machen
+ *   > Config-Wert: dd_blMiniBasketAmount
+ */
+.dd_oxModernizr_basketFlyout {
+  width: auto;
+  max-width: 500px;
+  padding-right: 80px;
+  overflow: hidden;
+}
+.dd_oxModernizr_basketFlyout .closePop {
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+.dd_oxModernizr_basketFlyout .ajaxLoading {
+  background: rgba(255, 255, 255, 0.6) url('../bg/loading.gif') no-repeat center center;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.dd_oxModernizr_basketFlyout.dd_oxModernizr_basketThumbs ul li {
+  height: 30px;
+}
+.dd_oxModernizr_basketFlyout.dd_oxModernizr_basketThumbs ul li .thumb {
+  padding: 3px 0 0 5px;
+}
+.dd_oxModernizr_basketFlyout.dd_oxModernizr_basketThumbs ul li .thumb img {
+  max-width: 23px;
+  max-height: 23px;
+}
+.dd_oxModernizr_basketFlyout.dd_oxModernizr_basketThumbs ul li .changeAmount {
+  height: 26px;
+}
+.dd_oxModernizr_basketFlyout ul,
+.dd_oxModernizr_basketFlyout hr {
+  width: 100%;
+}
+.dd_oxModernizr_basketFlyout .totals {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.dd_oxModernizr_basketFlyout .totals .item {
+  padding-left: 10px;
+}
+.dd_oxModernizr_basketFlyout .totals .price {
+  padding-right: 10px;
+}
+.dd_oxModernizr_basketFlyout ul li {
+  border-bottom: 1px solid #a2a9ab;
+  height: 27px;
+}
+.dd_oxModernizr_basketFlyout ul li:first-child .changeAmount,
+.dd_oxModernizr_basketFlyout ul li:first-child .deleteProduct {
+  border-top: none;
+}
+.dd_oxModernizr_basketFlyout ul li a {
+  border-bottom: none;
+  float: left;
+  display: block;
+}
+.dd_oxModernizr_basketFlyout ul li a.titleLink {
+  width: 180px;
+  padding-top: 6px;
+  padding-right: 0;
+}
+.dd_oxModernizr_basketFlyout ul li a.titleLink .item {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.dd_oxModernizr_basketFlyout ul li a.priceLink {
+  width: 60px;
+  padding-left: 0;
+  float: right;
+}
+.dd_oxModernizr_basketFlyout ul li .changeAmount {
+  border-top: 1px solid #FFF;
+  width: 80px;
+  height: 23px;
+  padding-top: 4px;
+  float: left;
+}
+.dd_oxModernizr_basketFlyout ul li .changeAmount .ctrl {
+  border: 1px solid #8c8989;
+  width: 23.2px;
+  height: 17px;
+  display: block;
+  padding: 0;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.dd_oxModernizr_basketFlyout ul li .changeAmount .ctrl.down {
+  border-right: none;
+  -webkit-border-topright-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottomright-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dd_oxModernizr_basketFlyout ul li .changeAmount .ctrl.up {
+  border-left: none;
+  -webkit-border-topleft-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-bottomleft-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.dd_oxModernizr_basketFlyout ul li .changeAmount .amount {
+  width: 25.6px;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  text-align: center;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.dd_oxModernizr_basketFlyout ul li .deleteProduct {
+  border-top: 1px solid #FFF;
+  background: transparent url('../bg/delete.png') no-repeat left 6px;
+  width: 16px;
+  height: 22px;
+  display: block;
+  padding: 0;
+  float: left;
+  cursor: pointer;
+}
+.dd_oxModernizr_basketFlyout.scrollable {
+  width: 430px;
+}
+.dd_oxModernizr_basketFlyout.scrollable .scrollbarBox {
+  width: 100%;
+}
+.dd_oxModernizr_basketFlyout.scrollable .basketItems {
+  width: 100%;
+}
+/*
+ * [6] Produktmenge im Warenkorb änderbar machen
+ *   > Config-Wert: dd_blBasketAmount
+ */
+.dd_oxModernizr_basket {
+  position: relative;
+}
+.dd_oxModernizr_basket .ajaxLoading {
+  background: rgba(255, 255, 255, 0.6) url('../bg/loading.gif') no-repeat center center;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.dd_oxModernizr_basket td.quantity {
+  width: 110px;
+}
+.dd_oxModernizr_basket .changeAmount {
+  width: 80px;
+  height: 23px;
+  float: left;
+}
+.dd_oxModernizr_basket .changeAmount .ctrl {
+  border: 1px solid #8c8989;
+  width: 23.2px;
+  height: 17px;
+  display: block;
+  padding: 0;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.dd_oxModernizr_basket .changeAmount .ctrl.down {
+  border-right: none;
+  -webkit-border-topright-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottomright-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dd_oxModernizr_basket .changeAmount .ctrl.up {
+  border-left: none;
+  -webkit-border-topleft-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-bottomleft-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.dd_oxModernizr_basket .changeAmount .amount {
+  width: 25.6px;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  text-align: center;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.dd_oxModernizr_basket .deleteProduct {
+  background: transparent url('../bg/delete.png') no-repeat left 2px;
+  width: 16px;
+  height: 17px;
+  display: block;
+  padding: 0;
+  float: left;
+  cursor: pointer;
+}

@@ -1,0 +1,344 @@
+/*
+ * [1] Generelle Verbesserungen
+ */
+// Zu lange Strings mit "..." abkürzen.
+.basketFlyout .item // Produktnamen im Minibasket
+{
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+}
+
+/*
+ * [2] Clear-Buttons in Formularen
+ *   > Config-Wert: dd_blEnabledClearInput
+ */
+.dd_clearInput {
+    border:1px solid #ccc;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-color:#ccc;
+    width:12px;
+    height:14px;
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:999;
+    padding:0 2px 0 0;
+    color:#FFF;
+    font-size:14px;
+    font-weight:700;
+    line-height:13px;
+    text-align:center;
+    cursor:pointer;
+
+    &:hover {
+        border:1px solid #ccc;
+        background-color:#FFF;
+        color:#ccc;
+    }
+
+    &.show { display:block; }
+}
+
+
+/*
+ * [3] Produkt-Thumbnails im Mini-Warenkorb
+ *   > Config-Wert: dd_blMiniBasketThumbs
+ */
+.dd_oxModernizr_basketThumbs {
+    .thumb {
+        border-bottom:none;
+        max-width:@basketFlyout-prodList-thumbnail-width;
+        max-height:@basketFlyout-prodList-thumbnail-width;
+        float:left;
+        padding:3px 5px 0 5px;
+
+        &:hover {
+            background:transparent;
+        }
+
+        img {
+            max-width:@basketFlyout-prodList-thumbnail-width;
+            max-height:@basketFlyout-prodList-thumbnail-width;
+        }
+    }
+}
+
+/*
+ * [4] Hover-Effekt im Mini-Warenkorb bei den Produkten auf das li-Element legen
+ */
+.dd_oxModernizr_basketThumbs,
+.dd_oxModernizr_basketFlyout {
+    ul {
+        li {
+            &:hover {
+                background: #EC6105 url("../bg/svg/grad_orange.svg");
+                background: -moz-linear-gradient(#FF8604, #EC6105);
+                background: -ms-linear-gradient(#FF8604, #EC6105);
+                background: -webkit-gradient(linear, left top, left bottom, from(#FF8604), to(#EC6105));
+                background: -webkit-linear-gradient(#FF8604, #EC6105);
+                background: -o-linear-gradient(#FF8604, #EC6105);
+                background: linear-gradient(#FF8604, #EC6105);
+
+                a,
+                a span { color: #FFF }
+            }
+        }
+    }
+}
+
+/*
+ * [5] Produktmenge im Mini-Warenkorb (Header) änderbar machen
+ *   > Config-Wert: dd_blMiniBasketAmount
+ */
+@basketFlyout-prodList-amountField-width: 80px;
+@basketFlyout-prodList-thumbnail-width: 23px;
+.dd_oxModernizr_basketFlyout {
+    width:auto;
+    max-width:500px;
+    padding-right:80px;
+    overflow: hidden;
+
+    .closePop {
+        position:absolute;
+        top:7px;
+        right:0;
+    }
+
+    .ajaxLoading {
+        background:rgba(255, 255, 255, 0.6) url( '../bg/loading.gif' ) no-repeat center center;
+        width:100%;
+        height:100%;
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:999;
+    }
+
+    &.dd_oxModernizr_basketThumbs {
+        ul {
+            li {
+                height:30px;
+
+                .thumb {
+                    padding:3px 0 0 5px;
+
+                    img {
+                        max-width:@basketFlyout-prodList-thumbnail-width;
+                        max-height:@basketFlyout-prodList-thumbnail-width;
+                    }
+                }
+
+                .changeAmount {
+                    height:26px;
+                }
+            }
+        }
+    }
+
+    ul,
+    hr { width:100%; }
+
+    .totals {
+        width:100%;
+        padding-left:0;
+        padding-right:0;
+
+        .item  { padding-left: 10px }
+        .price { padding-right:10px }
+    }
+
+    ul {
+        li {
+            border-bottom:1px solid #a2a9ab;
+            height:27px;
+
+            &:first-child {
+                .changeAmount,
+                .deleteProduct { border-top:none }
+            }
+
+            a {
+                border-bottom:none;
+                float:left;
+                display:block;
+
+                &.titleLink {
+                    width: 180px;
+                    padding-top: 6px;
+                    padding-right:0;
+
+                    .item {
+                        width:100%;
+                        overflow:hidden;
+                        white-space:nowrap;
+                        text-overflow:ellipsis;
+                        -o-text-overflow:ellipsis;
+                    }
+                }
+                &.priceLink {
+                    width: 60px;
+                    padding-left:0;
+                    float:right;
+                }
+            }
+
+            .changeAmount {
+                border-top:1px solid #FFF;
+                width:80px;
+                height:23px;
+                padding-top:4px;
+                float:left;
+
+                .ctrl {
+                    border:1px solid #8c8989;
+                    width:23.2px;
+                    height:17px;
+                    display:block;
+                    padding:0;
+                    float:left;
+                    text-align:center;
+                    font-weight:bold;
+                    color:#FFF;
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: moz-none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    &.down {
+                        border-right:none;
+                        -webkit-border-topright-radius:0;
+                        border-top-right-radius: 0;
+                        -webkit-border-bottomright-radius:0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    &.up {
+                        border-left:none;
+                        -webkit-border-topleft-radius:0;
+                        border-top-left-radius: 0;
+                        -webkit-border-bottomleft-radius:0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+
+                .amount {
+                    width:25.6px;
+                    display:block;
+                    padding-left:0;
+                    padding-right:0;
+                    float:left;
+                    text-align:center;
+                    -moz-border-radius:0;
+                    border-radius:0;
+                }
+            }
+
+            .deleteProduct {
+                border-top:1px solid #FFF;
+                background:transparent url( '../bg/delete.png' ) no-repeat left 6px;
+                width:16px;
+                height:22px;
+                display:block;
+                padding:0;
+                float:left;
+                cursor:pointer;
+            }
+        }
+    }
+
+    &.scrollable {
+        width:430px;
+        .scrollbarBox { width:100%; }
+        .basketItems { width:100%; }
+    }
+}
+
+
+/*
+ * [6] Produktmenge im Warenkorb änderbar machen
+ *   > Config-Wert: dd_blBasketAmount
+ */
+.dd_oxModernizr_basket {
+    position:relative;
+
+    
+    .ajaxLoading {
+        background:rgba(255, 255, 255, 0.6) url( '../bg/loading.gif' ) no-repeat center center;
+        width:100%;
+        height:100%;
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:999;
+    }
+
+    td.quantity { width:110px }
+
+    .changeAmount {
+        width:80px;
+        height:23px;
+        float:left;
+
+        .ctrl {
+            border:1px solid #8c8989;
+            width:23.2px;
+            height:17px;
+            display:block;
+            padding:0;
+            float:left;
+            text-align:center;
+            font-weight:bold;
+            color:#FFF;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: moz-none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &.down {
+                border-right:none;
+                -webkit-border-topright-radius:0;
+                border-top-right-radius: 0;
+                -webkit-border-bottomright-radius:0;
+                border-bottom-right-radius: 0;
+            }
+
+            &.up {
+                border-left:none;
+                -webkit-border-topleft-radius:0;
+                border-top-left-radius: 0;
+                -webkit-border-bottomleft-radius:0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .amount {
+            width:25.6px;
+            display:block;
+            padding-left:0;
+            padding-right:0;
+            float:left;
+            text-align:center;
+            -moz-border-radius:0;
+            border-radius:0;
+        }
+    }
+
+    .deleteProduct {
+        background:transparent url( '../bg/delete.png' ) no-repeat left 2px;
+        width:16px;
+        height:17px;
+        display:block;
+        padding:0;
+        float:left;
+        cursor:pointer;
+    }
+
+}
