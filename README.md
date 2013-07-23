@@ -5,6 +5,8 @@ Dieses Modul versorgt das OXID eShop-Frontend mit den modernsten User-Interface-
 
 > Achtung: Dieses Modul ist auf die Theme-HTML-Struktur vom Standard-Azure-Theme ausgelegt. Für eigene Themes müssen ggf. Anpassungen im Mini-Warenkorb (Header) dieses Moduls gemacht werden.
 
+Den Link zum Demo-Shop gibt es weiter unten.
+
 ## Funktionsumfang
 Folgende Einstellungen können in diesem Modul getroffen werden:
 
@@ -49,6 +51,11 @@ Folgende Einstellungen können in diesem Modul getroffen werden:
 ## Übersetzungen (i18n)
 - Deutsch (German)
 - Englisch (English)
+
+## Demo-Shop
+Es gibt auch einen Demo-Shop in dem das Modul ausprobiert werden kann. Der Demo-Shop wird stündlich resetted.
+- [Frontend](http://oxmodernizr.digidesk.de/)
+- [Backend](http://oxmodernizr.digidesk.de/admin/)
 
 ## Verwendete Entwicklungs-Tools
 - Jetbrains PhpStorm
