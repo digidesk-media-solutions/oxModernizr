@@ -8,8 +8,8 @@ $sMetadataVersion = '1.1';
  * Module information
  */
 $aModule = array(
-    'id' => 'dd_oxmodernizr',
-    'title' => 'Digidesk - oxModernizr',
+    'id'          => 'dd_oxmodernizr',
+    'title'       => 'Digidesk - oxModernizr',
     'description' => array(
         'de' => 'Dieses Modul versorgt Ihr Shop-Frontend mit den modernsten User-Interface-Elementen und Techniken.<br/>
                  Verf&uuml;gbare Funktionen finden Sie im Kartenreiter "Einstellungen" in diesem Moduls.<hr/>
@@ -27,11 +27,11 @@ $aModule = array(
                  </span>',
     ),
     'thumbnail' => 'logo.png',
-    'version' => '1.0',
-    'author' => 'digidesk - media solutions',
-    'url' => 'http://www.digidesk.de',
-    'email' => 'support@digidesk.de',
-    'extend' => array(
+    'version'   => '1.0',
+    'author'    => 'digidesk - media solutions',
+    'url'       => 'http://www.digidesk.de',
+    'email'     => 'support@digidesk.de',
+    'extend'    => array(
         'oxviewconfig' => 'digidesk/dd_oxmodernizr/core/dd_oxmodernizr_oxviewconfig',
         'basket'       => 'digidesk/dd_oxmodernizr/application/controllers/dd_oxmodernizr_basket_ajax'
     ),
@@ -52,6 +52,7 @@ $aModule = array(
         // allgemeine Benutzerfreundlichkeit
         array('group' => 'DD_OXMODERNIZR_SETTINGS_USABILITY',   'name' => 'dd_blEnabledClearInput',         'type' => 'bool', 'position' => 1, 'value' => true),
 
+        // Effekte
         array('group' => 'DD_OXMODERNIZR_SETTINGS_EFFECTS',     'name' => 'dd_blToBasketAnimation',         'type' => 'bool', 'position' => 1, 'value' => true),
 
         // Warenkorb
