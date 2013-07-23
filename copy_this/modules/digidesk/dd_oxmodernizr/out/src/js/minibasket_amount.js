@@ -1,5 +1,6 @@
 $( document ).ready( function()
 {
+    var blClearBasket = false;
 
     /**
      * Produktmenge im Mini-Warenkorb (Header) änderbar machen
@@ -96,7 +97,7 @@ $( document ).ready( function()
                 awsmInfiniteLoopPr0tect0r = 0;
 
                 var self = $( this );
-                if( self.val() == '0' )
+                if( self.val() == '0' || blClearBasket )
                 {
                     if( dd_oxModernizr.oSettings.dd_blMiniBasketjQueryUiConfirm )
                     {
@@ -105,7 +106,7 @@ $( document ).ready( function()
                         buttonsOpts[dd_oxModernizr.oLangStrings.DD_CONFIRM_REMOVE_ITEM_FROM_MINIBASKET_YES] = function( x, y, z )
                         {
                             $( this ).dialog( "close" );
-                            self.closest( 'li' ).slideUp();
+                            self.val( '0' ).closest( 'li' ).slideUp();
                             updateMiniBasket();
                         }
                         buttonsOpts[dd_oxModernizr.oLangStrings.DD_CONFIRM_REMOVE_ITEM_FROM_MINIBASKET_NO] = function() { $( this ).dialog( "close" ); }
@@ -122,10 +123,12 @@ $( document ).ready( function()
                     {
                         if( confirm( dd_oxModernizr.oLangStrings.DD_CONFIRM_REMOVE_ITEM_FROM_MINIBASKET ) )
                         {
-                            self.closest( 'li' ).slideUp();
+                            self.val( '0' ).closest( 'li' ).slideUp();
                             updateMiniBasket();
                         }
                     }
+
+                    blClearBasket = false;
                 }
                 else
                 {
@@ -137,7 +140,8 @@ $( document ).ready( function()
             {
                 $( '.dd_oxModernizr_basketFlyout .deleteProduct' ).click( function()
                 {
-                    $( this ).parent().find( '.changeAmount input.amount' ).val( '0' ).change();
+                    blClearBasket = true;
+                    $( this ).parent().find( '.changeAmount input.amount' ).change();
                 } );
             }
         }
